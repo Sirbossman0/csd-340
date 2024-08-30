@@ -3,6 +3,11 @@
     grid-template-columns: 33% 33% 33%;
 }
 
+#image-gallery {
+    margin-top: 10%;
+}
+
+
 h1 {
     margin: auto;
     text-align: center;
@@ -12,10 +17,6 @@ h1 {
 h3 {
     text-align: center;
     color: rgba(163, 0, 0, 0.904);
-}
-
-.image-gallery {
-    margin-top: 10%;
 }
 
 .image1 {
