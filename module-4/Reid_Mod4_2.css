@@ -1,0 +1,55 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+    color: rgba(163, 0, 0, 0.904);
+}
+
+h3 {
+    text-align: center;
+    color: rgba(163, 0, 0, 0.904);
+}
+
+.image-gallery {
+    margin-top: 10%;
+}
+
+.image1 {
+    border: 1px solid rgba(163, 0, 0, 0.904);
+}
+
+.image2 {
+    border: 1px solid rgba(163, 0, 0, 0.904);
+}
+
+.image3 {
+    border: 1px solid rgba(163, 0, 0, 0.904);
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(163, 0, 0, 0.904);
+}
+
+.land {
+    margin-top: 60%;
+    float: right;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
