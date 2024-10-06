@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Module 11.2">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="Jeffrey Reid">
+
+    <link rel="stylesheet" href="Reid_Mod11_2.css">
+
+    <title>
+        CSD 340 Development with HTML and CSS
+    </title>
+
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <h1> Assignment 11.2: JavaScript - Part 3 </h1>
+
+    <div>
+    
+        <p>
+            This is a user created To Do List. Type in an item and click "Add" to add to the list, 
+            click "Delete Last Entry" to remove the last added entry, and click "Display" when ready 
+            to view the list.
+        </p>
+
+        <form>
+            <input type="text" id="listentry" name="listentry">
+            <button type="button" id="add" onclick="addtoResults()"> Add </button>            
+            <button type="button" id="delete" onclick="deletefromResults()"> Delete Last Entry </button>
+            <button type="button" id="display" onclick="openResults()"> Display </button>
+
+            <hr>
+        </form>
+
+        <p id="results"></p>        
+
+        <script>
+            var userlist = [];
+            var newvalue = "";
+
+            function addtoResults() {
+                newvalue = document.getElementById("listentry").value;
+                userlist.push(newvalue);
+                document.getElementById("listentry").value = "";
+                document.getElementById("results").style.display = "none";
+                alert("Item: " +  newvalue + " Added at Index " + (userlist.length - 1));
+            }
+
+            function deletefromResults() {
+                userlist.pop();
+                document.getElementById("results").style.display = "none";
+            }
+
+            let txt = "";    
+
+            function openResults() {
+                txt = "";                
+                for (var x = 0; x < userlist.length; x++) {
+                    txt += "Item " + (x + 1) + " = " + userlist[x] + "<br>"; 
+                }
+                document.getElementById("results").innerHTML = txt;
+                document.getElementById("results").style.display = "block";
+            }
+        </script>
+
+    </div>
+
+</body>
+
+</html>
