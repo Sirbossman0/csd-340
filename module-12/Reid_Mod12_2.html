@@ -1,0 +1,109 @@
+<!--Jeffrey Reid  Module 12.2-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Module 12.2">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="Jeffrey Reid">
+
+    <link rel="stylesheet" href="Reid_Mod12_2.css">
+
+    <title>
+        CSD 340 Web Development with HTML and CSS
+    </title>
+</head>
+
+<style>
+.grid-container {
+    display: grid;
+    grid-template-columns: 45% 45% 100%;
+}
+</style>
+
+<body>
+    <div id="container">
+    
+    <h1> Assignment 12.2: JavaScript - Part 4 </h1>
+
+    <div class="grid-container">
+
+    <div class="div1">
+        <h3> Top 10 Favorite Books </h3>
+        <button type="button" id="topbottom" onclick="toptobottom()"> Top to Bottom </button>
+        <button type="button" id="bottomtop" onclick="bottomtotop()"> Bottom to Top </button>
+        <hr>
+        <ol id="listbook">
+            <li> Battle Royale </li>
+            <li> Harry Potter and the Sorcerer's Stone (The whole series) </li>
+            <li> Epic </li>
+            <li> Artemis Fowl (The whole series) </li>
+            <li> The Chronicles of Narnia </li>
+            <li> The Ranger's Apprentice: The Ruins of Gorlan (The whole series) </li>
+            <li> The Lightning Thief (The whole series) </li>
+            <li> Unwind (The whole series) </li>
+            <li> A Series of Unfortunate Events: The Bad Beginning (The whole series) </li>
+            <li> Numbers </li>
+        </ol>
+
+        <script>
+            var book1 = "Battle Royale";
+            var book2 = "Harry Potter and the Sorcerer's Stone (The whole series)";
+            var book3 = "Epic";
+            var book4 = "Artemis Fowl (The whole series)";
+            var book5 = "The Chronicles of Narnia";
+            var book6 = "The Ranger's Apprentice: The Ruins of Gorlan (The whole series)";
+            var book7 = "The Lightning Thief (The whole series)";
+            var book8 = "Unwind (The whole series)";
+            var book9 = "A Series of Unfortunate Events: The Bad Beginning (The whole series)";
+            var book10 = "Numbers";
+
+            const booklist = [book1, book2, book3, book4, book5, book6, book7, book8, book9, book10];
+
+
+            function toptobottom() {
+                let txt = "";
+
+                for (var x = 0; x < booklist.length; x++) {
+                    txt += (x + 1) + ". " + booklist[x] + "<br>";
+                }
+                document.getElementById("listbook").innerHTML = txt;
+            }
+
+            function bottomtotop() {
+                const reverselist = booklist.toReversed();
+                let a = 10;
+                let txt = "";
+
+                for (var x = 0; x < reverselist.length; x++) {
+                    txt += (a) + ". " + reverselist[x] + "<br>";
+                    -- a;
+                }
+                document.getElementById("listbook").innerHTML = txt;
+            }
+
+        </script>
+    </div>
+
+    <div class="div2">
+        <h3> 5 Things I've Learned Since the Course Started </h3>
+        <ul>
+            <li> How to code in HTML and CSS of course </li>
+            <li> The brain uses more processing power when imagining things versus simply remembering them </li>
+            <li> The brain fills in the blanks based on patterns and expectations when reading text, rather than actually seeing the words</li>
+            <li> The style of an HTML file is done typically though a CSS file, though it's not technically necessary </li>
+            <li> Vivid memories may seem like something you'd remember in detail, but in actuality you aren't remembering the exact scenario because your brain is reconstructing the experience </li>
+        </ul>
+    </div>
+
+    </div>
+
+    <div class="div3">
+        <a href="https://sirbossman0.github.io/csd-340/"> Landing Page </a>
+    </div>
+
+    </div>
+
+</body>
+
+</html>
